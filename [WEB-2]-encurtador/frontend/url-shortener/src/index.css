@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Quicksand:wght@300..700&display=swap');
+
+* {
+  font-family: "Poppins", serif;
+}
+
+
+.btn-encurtar {
+  background-color: #261d73; 
+  color: #ffffff;              
+}
+
+.btn-encurtar:hover {
+  background-color: #130f61;
+  /* color: #9a85f7; */
+  color: #ffffff
+}
+
+.logo {
+  font-size: 30px;
+}
