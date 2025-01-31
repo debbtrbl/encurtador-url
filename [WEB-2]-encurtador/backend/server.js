@@ -10,7 +10,7 @@ app.use(cors());
 
 // Adicionar rotas
 app.use(urlRoutes);
-app.use(authRoutes); // Certifique-se de que authRoutes está incluído
+app.use(authRoutes);
 
 app.listen(3001, () => {
   console.log("Servidor rodando na porta 3001");
