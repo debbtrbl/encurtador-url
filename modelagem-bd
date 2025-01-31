@@ -1,0 +1,26 @@
+Modelagem do banco de dados:
+
+CREATE TABLE usuario (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role VARCHAR(50) DEFAULT 'usuario'
+);
+
+CREATE TABLE url (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario_id INT,
+  long_url TEXT NOT NULL,
+  short_url VARCHAR(6) NOT NULL UNIQUE,
+  FOREIGN KEY (usuario_id) REFERENCES usuario(id)
+);
+
+CREATE TABLE accesso (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  url_id INT,
+  access_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  ip VARCHAR(50),
+  location VARCHAR(255),
+  FOREIGN KEY (url_id) REFERENCES url(id)
+);
